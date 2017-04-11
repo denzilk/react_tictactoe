@@ -2,13 +2,6 @@ import React from 'react';
 import './App.css';
 
 class Square extends React.Component {
-    constructor(){
-        super();
-        this.state = {
-            value: null
-        }
-    }
-
     render() {
         return (
         <button className="square" onClick={() => this.props.onClick()}>
@@ -62,7 +55,6 @@ class Game extends React.Component {
 
         if(this.state.stepNumber < history.length-1){
             history = history.slice(0, this.state.stepNumber+1);
-            console.log('settomg state');
             this.setState({
                 history: history,
             })
